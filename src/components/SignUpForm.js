@@ -39,15 +39,53 @@ const SignUpForm = () => {
     passwordRef.current.value = '';
   };
   return (
-    <div>
-      <form onSubmit={signUpNewUser}>
-        <input ref={firstNameRef} type="text" placeholder="First Name" />
-        <input ref={lastNameRef} type="text" placeholder="Last Name" />
-        <input ref={emailRef} type="email" placeholder="Email" />
-        <input ref={passwordRef} type="password" placeholder="Password" />
-        <button type="submit">Sign Up</button>
+    <section className="form-section">
+      <div className="ads-block">
+        <p>
+          <b>Try it free 7 days</b> then $20/mo, thereafter
+        </p>
+      </div>
+      <form onSubmit={signUpNewUser} className="signup-form">
+        <input
+          ref={firstNameRef}
+          type="text"
+          className="form-input"
+          placeholder="First Name"
+        />
+        <input
+          ref={lastNameRef}
+          type="text"
+          className="form-input"
+          placeholder="Last Name"
+        />
+        <input
+          ref={emailRef}
+          type="email"
+          className="form-input"
+          placeholder="Email Address"
+        />
+        <input
+          ref={passwordRef}
+          type="password"
+          className="form-input"
+          placeholder="Password"
+        />
+        <button type="submit" className="submit-btn">
+          Claim Your Free Trial
+        </button>
+        <small>
+          By clicking the button, you are agreeing to our{' '}
+          <a
+            href="https://github.com/indiecodermm/signup-form"
+            target="_blank"
+            rel="noreferrer"
+            title="Repo Link"
+          >
+            <b>Terms and Services</b>
+          </a>
+        </small>
       </form>
-    </div>
+    </section>
   );
 };
 

@@ -1,13 +1,131 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --gray-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--red);
+}
+
+main {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  background-color: var(--red);
+  background-image: url('./assets/bg-intro-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 1em;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 2em 0;
+  line-height: 2;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Intro section  */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  color: #fff;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.description {
+  line-height: 1.8;
+  font-size: 0.9em;
+  padding: 1em;
+}
+
+/* Form component  */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  gap: 1em;
+}
+
+.ads-block {
+  background-color: var(--blue);
+  color: #fff;
+  border-radius: 10px;
+  padding: 1em 2em;
+  text-align: center;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.form-input {
+  padding: 1em;
+  border-radius: 5px;
+  border: solid 1px var(--gray-blue);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.form-input::placeholder {
+  color: var(--gray-blue);
+}
+
+.submit-btn {
+  background-color: var(--green);
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 1em;
+}
+
+.signup-form > small {
+  font-size: 0.7em;
+  color: var(--gray-blue);
+  text-align: center;
+}
+
+.signup-form > small > a {
+  text-decoration: none;
+  color: var(--red);
 }

@@ -27,6 +27,8 @@ function App() {
           </a>
         </p>
         <p>
+          Created with React & Firestore
+          <br />
           Author:{' '}
           <a
             href="https://github.com/IndieCoderMM"
@@ -36,7 +38,6 @@ function App() {
             IndieCoderMM
           </a>
         </p>
-        <p>Created with React & Firestore</p>
       </footer>
     </>
   );

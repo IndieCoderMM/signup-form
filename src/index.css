@@ -8,7 +8,9 @@
 
 :root {
   --red: hsl(0, 100%, 74%);
+  --dark-red: hsl(0, 100%, 63%);
   --green: hsl(154, 59%, 51%);
+  --light-green: hsl(147, 79%, 50%);
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
   --gray-blue: hsl(246, 25%, 77%);
@@ -29,7 +31,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding: 1em;
+  padding: 3px;
 }
 
 footer {
@@ -84,6 +86,9 @@ footer a {
   border-radius: 10px;
   padding: 1em 2em;
   text-align: center;
+  box-shadow: 0px 5.3px 3px -1px rgba(0, 0, 0, 0.057),
+    0px 7.9px 4.4px -1px rgba(0, 0, 0, 0.083),
+    0px 15px 9px -1px rgba(0, 0, 0, 0.14);
 }
 
 .signup-form {
@@ -94,6 +99,9 @@ footer a {
   padding: 2em;
   border-radius: 10px;
   background-color: #fff;
+  box-shadow: 0px 5.3px 3px -1px rgba(0, 0, 0, 0.057),
+    0px 7.9px 4.4px -1px rgba(0, 0, 0, 0.083),
+    0px 15px 9px -1px rgba(0, 0, 0, 0.14);
 }
 
 .input-container {
@@ -118,6 +126,14 @@ footer a {
   justify-content: space-between;
 }
 
+.form-group.invalid {
+  border: solid 2px var(--red);
+}
+
+.form-group:focus-within {
+  border: solid 1px var(--dark-blue);
+}
+
 .form-input {
   border: none;
   font-family: 'Poppins', sans-serif;
@@ -140,8 +156,28 @@ footer a {
   color: #fff;
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.05em;
   padding: 1em;
+  transition: all 0.3s;
+  appearance: none;
+  border: none;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgb(3, 181, 3) 0 -3px 0 inset;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.15s;
+}
+
+.submit-btn:hover {
+  background-color: var(--light-green);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(3, 181, 3) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  box-shadow: rgb(3, 181, 3) 0 3px 7px inset;
+  transform: translateY(2px);
 }
 
 .signup-form > small {
@@ -153,6 +189,10 @@ footer a {
 .signup-form > small > a {
   text-decoration: none;
   color: var(--red);
+}
+
+.signup-form > small > a:hover {
+  color: var(--dark-red);
 }
 
 /* Desktop version  */

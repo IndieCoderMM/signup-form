@@ -5,12 +5,13 @@ const FormInput = forwardRef(
   ({ placeholder = '', errorMsg = '', valid = false }, ref) => {
     return (
       <div className="input-container">
-        <div className="form-group">
+        <div className={`form-group ${valid ? '' : 'invalid'}`}>
           <input
             ref={ref}
             type="text"
             className="form-input"
             placeholder={placeholder}
+            maxLength={30}
           />
           {!valid && <img src={errorIcon} alt="error icon" />}
         </div>

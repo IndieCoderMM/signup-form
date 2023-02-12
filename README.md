@@ -1,7 +1,7 @@
 ## 📋 Table of contents
 
 - [📝 Sign Up Form Component](#-sign-up-form-component)
-  - [📌 Overview](#-overview)
+  - [🔍 Overview](#-overview)
     - [🎯 Challenge](#-challenge)
     - [📸 Screenshot](#-screenshot)
     - [🔗 Links](#-links)
@@ -17,13 +17,11 @@
 
 # 📝 Sign Up Form Component
 
-This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1).
 
-## 📌 Overview
+## 🔍 Overview
 
 ### 🎯 Challenge
-
-Users should be able to:
 
 Users should be able to:
 
@@ -51,16 +49,24 @@ Users should be able to:
 
 ### 💡 What I learned
 
-In this project, I learned ...
+In this project, I learned:
+- How to add Firebase to a React app
+- How to use Firestore as a database for storing docs
+- Using Regex to validate input values
+- Improving UX with conditional class and components
 
 
 ### 🔭 Future features
 
-These are the feature I'd like to add ...
+- [ ] Loading and popup message
+- [ ] Display list of registered users
+- [ ] Use this component in a real app
 
 ### 💎 Useful resources
 
-These are the resources I used ...
+- [React Chat App in 7 min](https://youtu.be/zQyrwxMPm88) - Using Firestore in React
+- [CSS Buttons Examples](https://getcssscan.com/css-buttons-examples) - Beautiful button styles
+- [Password Validation](https://www.w3resource.com/javascript/form/password-validation.php) - Regex for password validation
 
 
 ## 📧 Connect wit me

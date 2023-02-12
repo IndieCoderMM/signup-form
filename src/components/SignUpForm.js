@@ -1,6 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, addDoc, collection } from 'firebase/firestore';
+import { Validator } from '../utils/formValidator';
+import FormInput from './FormInput';
 
 const config = {
   apiKey: process.env.REACT_APP_FB_API_KEY,
@@ -15,29 +17,43 @@ const firebase = initializeApp(config);
 const firestore = getFirestore(firebase);
 
 const SignUpForm = () => {
+  const [validator, setValidator] = useState(new Validator());
   const firstNameRef = useRef();
   const lastNameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const usersCollection = collection(firestore, 'users');
+
+  useEffect(() => {
+    const addNewUser = async () => {
+      if (validator.status === 'success') {
+        await addDoc(usersCollection, {
+          firstname: validator.firstname,
+          lastname: validator.lastname,
+          email: validator.email.value,
+          password: validator.password.value,
+          // Clean up
+        });
+        firstNameRef.current.value = '';
+        lastNameRef.current.value = '';
+        emailRef.current.value = '';
+        passwordRef.current.value = '';
+      }
+    };
+    addNewUser();
+    // eslint-disable-next-line
+  }, [validator]);
+
   const signUpNewUser = async (e) => {
     e.preventDefault();
     const firstname = firstNameRef.current.value.trim();
     const lastname = lastNameRef.current.value.trim();
     const email = emailRef.current.value.trim();
     const password = passwordRef.current.value.trim();
-    if (!(firstname && lastname && email && password)) return;
-    await addDoc(usersCollection, {
-      firstname,
-      lastname,
-      email,
-      password,
-    });
-    firstNameRef.current.value = '';
-    lastNameRef.current.value = '';
-    emailRef.current.value = '';
-    passwordRef.current.value = '';
+    // Form validation
+    setValidator(new Validator(firstname, lastname, email, password, 'check'));
   };
+
   return (
     <section className="form-section">
       <div className="ads-block">
@@ -46,29 +62,43 @@ const SignUpForm = () => {
         </p>
       </div>
       <form onSubmit={signUpNewUser} className="signup-form">
-        <input
+        <FormInput
           ref={firstNameRef}
-          type="text"
-          className="form-input"
           placeholder="First Name"
+          valid={validator.status === 'idle' || validator.firstname}
+          errorMsg="First Name cannot be empty"
         />
-        <input
+        <FormInput
           ref={lastNameRef}
-          type="text"
-          className="form-input"
           placeholder="Last Name"
+          valid={validator.status === 'idle' || validator.lastname}
+          errorMsg="Last Name cannot be empty"
         />
-        <input
+        <FormInput
           ref={emailRef}
-          type="email"
-          className="form-input"
           placeholder="Email Address"
+          valid={
+            validator.status === 'idle' ||
+            (!validator.email.empty && validator.email.valid)
+          }
+          errorMsg={
+            validator.email.empty
+              ? 'Please fill in your email'
+              : 'Looks like this is not an email'
+          }
         />
-        <input
+        <FormInput
           ref={passwordRef}
-          type="password"
-          className="form-input"
           placeholder="Password"
+          valid={
+            validator.status === 'idle' ||
+            (!validator.password.empty && validator.password.valid)
+          }
+          errorMsg={
+            validator.password.empty
+              ? 'Password cannot be empty'
+              : 'Password should contain 6-20 characters (at least one uppercase, one lowercase & one digit)'
+          }
         />
         <button type="submit" className="submit-btn">
           Claim Your Free Trial

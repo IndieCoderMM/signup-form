@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+## 📋 Table of contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [📝 Sign Up Form Component](#-sign-up-form-component)
+  - [📌 Overview](#-overview)
+    - [🎯 Challenge](#-challenge)
+    - [📸 Screenshot](#-screenshot)
+    - [🔗 Links](#-links)
+  - [🚂 My process](#-my-process)
+    - [🧰 Built With](#-built-with)
+    - [💡 What I learned](#-what-i-learned)
+    - [🔭 Future features](#-future-features)
+    - [💎 Useful resources](#-useful-resources)
+  - [📧 Connect wit me](#-connect-wit-me)
+  - [🤝 Contributing](#-contributing)
+  - [💖 Show your support](#-show-your-support)
+  - [📜 License ](#-license-)
 
-## Available Scripts
+# 📝 Sign Up Form Component
 
-In the project directory, you can run:
+This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-### `npm start`
+## 📌 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🎯 Challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Receive an error message when the `form` is submitted if:
+  - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
+  - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
 
-### `npm run build`
+### 📸 Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Screenshot](./app_screenshot.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔗 Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solution URL: [My Solution](#)
+- Live Site URL: [Demo Website](https://indiecodermm.github.io/signup-form)
 
-### `npm run eject`
+## 🚂 My process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🧰 Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React.js](https://reactjs.org/) - to create UI and dynamic components
+- [Firebase](https://console.firebase.google.com/) - to store registration data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 💡 What I learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In this project, I learned ...
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🔭 Future features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These are the feature I'd like to add ...
 
-### Code Splitting
+### 💎 Useful resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+These are the resources I used ...
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📧 Connect wit me
 
-### Making a Progressive Web App
+I am always looking for ways to improve my project. If you have any suggestions or ideas, I would love to hear from you.
+- GitHub - [IndieCoderMM](https://www.your-site.com)
+- Frontend Mentor - [@IndieCoderMM](https://www.frontendmentor.io/profile/IndieCoderMM)
+- Linkedin - [@hthantoo](https://www.linkedin.com/in/hthantoo/)
+- Gmail - [hthant00chk@gmail.com](mailto:hthant00chk@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🤝 Contributing
 
-### Advanced Configuration
+I welcome any and all contributions to my website! If you have an idea for a new feature or have found a bug, please open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Feel free to check the [issues page](../../issues/).
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 💖 Show your support
+If you like this project, please consider giving it a ⭐.
 
-### `npm run build` fails to minify
+## 📜 License <a name="license"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.

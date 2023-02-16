@@ -1,6 +1,6 @@
 ## 📋 Table of contents
 
-- [📝 Sign Up Form Component](#-sign-up-form-component)
+- [🎫 Sign Up Form Component](#-sign-up-form-component)
   - [🔍 Overview](#-overview)
     - [🎯 Challenge](#-challenge)
     - [📸 Screenshot](#-screenshot)
@@ -15,7 +15,7 @@
   - [💖 Show your support](#-show-your-support)
   - [📜 License ](#-license-)
 
-# 📝 Sign Up Form Component
+# 🎫 Sign Up Form Component
 
 This is a solution to the [Intro component with sign up form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1).
 
@@ -58,13 +58,14 @@ In this project, I learned:
 
 ### 🔭 Future features
 
+- [x] Display list of registered users
 - [ ] Loading and popup message
-- [ ] Display list of registered users
 - [ ] Use this component in a real app
 
 ### 💎 Useful resources
 
 - [React Chat App in 7 min](https://youtu.be/zQyrwxMPm88) - Using Firestore in React
+- [React Firebase Hooks](https://github.com/CSFrequency/react-firebase-hooks/blob/master/firestore/README.md) - Documentation on firebase hooks
 - [CSS Buttons Examples](https://getcssscan.com/css-buttons-examples) - Beautiful button styles
 - [Password Validation](https://www.w3resource.com/javascript/form/password-validation.php) - Regex for password validation
 

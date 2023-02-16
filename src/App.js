@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import SignUpForm from './components/SignUpForm';
+import UserList from './components/UserList';
 
 function App() {
+  const [registered, setRegistered] = useState(false);
+
   return (
     <>
       <main>
@@ -12,7 +16,12 @@ function App() {
             is invaluable.
           </p>
         </section>
-        <SignUpForm />
+
+        {registered ? (
+          <UserList />
+        ) : (
+          <SignUpForm setRegistered={setRegistered} />
+        )}
       </main>
       <footer>
         <p>

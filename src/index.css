@@ -91,7 +91,7 @@ footer a {
     0px 15px 9px -1px rgba(0, 0, 0, 0.14);
 }
 
-.signup-form {
+.container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -193,6 +193,45 @@ footer a {
 
 .signup-form > small > a:hover {
   color: var(--dark-red);
+}
+
+/* Userlist view  */
+.user-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: solid 1px var(--blue);
+}
+
+.user-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  padding: 0.25em;
+}
+
+.user-list > li > div {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.profile-logo {
+  background-color: var(--blue);
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  border: solid 2px var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Desktop version  */

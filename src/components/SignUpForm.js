@@ -1,22 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, addDoc, collection } from 'firebase/firestore';
+import { firestore } from '../utils/firebaseUtils';
+import { addDoc, collection } from 'firebase/firestore';
 import { Validator } from '../utils/formValidator';
 import FormInput from './FormInput';
 
-const config = {
-  apiKey: process.env.REACT_APP_FB_API_KEY,
-  authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FB_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FB_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FB_APP_ID,
-};
-
-const firebase = initializeApp(config);
-const firestore = getFirestore(firebase);
-
-const SignUpForm = () => {
+const SignUpForm = ({ setRegistered }) => {
   const [validator, setValidator] = useState(new Validator());
   const firstNameRef = useRef();
   const lastNameRef = useRef();
@@ -38,6 +26,7 @@ const SignUpForm = () => {
         lastNameRef.current.value = '';
         emailRef.current.value = '';
         passwordRef.current.value = '';
+        setRegistered(true);
       }
     };
     addNewUser();
@@ -61,7 +50,7 @@ const SignUpForm = () => {
           <b>Try it free 7 days</b> then $20/mo, thereafter
         </p>
       </div>
-      <form onSubmit={signUpNewUser} className="signup-form">
+      <form onSubmit={signUpNewUser} className="signup-form container">
         <FormInput
           ref={firstNameRef}
           placeholder="First Name"

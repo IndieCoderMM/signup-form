@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/signup-form/static/css/main.d5e23175.css",
-    "main.js": "/signup-form/static/js/main.452cb46e.js",
+    "main.css": "/signup-form/static/css/main.c32dc62d.css",
+    "main.js": "/signup-form/static/js/main.da2cad24.js",
     "static/media/bg-intro-desktop.png": "/signup-form/static/media/bg-intro-desktop.059183eea52640c5068d.png",
     "static/media/bg-intro-mobile.png": "/signup-form/static/media/bg-intro-mobile.02ce398270ece1769ebc.png",
     "index.html": "/signup-form/index.html",
     "static/media/icon-error.svg": "/signup-form/static/media/icon-error.b72f792e9c900128f5c88f10a0d8d4b7.svg",
-    "main.d5e23175.css.map": "/signup-form/static/css/main.d5e23175.css.map",
-    "main.452cb46e.js.map": "/signup-form/static/js/main.452cb46e.js.map"
+    "main.c32dc62d.css.map": "/signup-form/static/css/main.c32dc62d.css.map",
+    "main.da2cad24.js.map": "/signup-form/static/js/main.da2cad24.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5e23175.css",
-    "static/js/main.452cb46e.js"
+    "static/css/main.c32dc62d.css",
+    "static/js/main.da2cad24.js"
   ]
 }
